@@ -1,9 +1,11 @@
 ---
 import ProjectCard from './ProjectCard.astro';
+import SectionTitle from './SectionTitle.astro';
 import { projects } from '../content/projects.ts';
 
 ---
 <section id="projects" class="projects-section">
+  <SectionTitle title="Projects" />
   <div class="projects-grid">
     {projects.slice(0,3).map((project) => (
       <ProjectCard {...project} />

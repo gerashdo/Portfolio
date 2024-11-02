@@ -1,0 +1,41 @@
+---
+interface Props {
+  title: string;
+}
+
+const {title} = Astro.props;
+---
+
+<h3 id="section-title" class="poppins-bold">
+  {title.toLocaleUpperCase()}
+</h3>
+
+<style>
+  h3 {
+    font-size: 1.125rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    padding-inline: 1rem;
+  }
+</style>
+
+<script>
+  const titles = document.querySelectorAll('#section-title') as NodeListOf<HTMLElement>;
+
+  if (titles) {
+    function toggleTitle() {
+      if (window.innerWidth >= 1000) {
+        titles.forEach((title) => {
+          title.style.display = 'none';
+        });
+      } else {
+        titles.forEach((title) => {
+          title.style.display = 'block';
+        });
+      }
+    }
+
+    window.addEventListener('resize', toggleTitle);
+    toggleTitle();
+  }
+</script>

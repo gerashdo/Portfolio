@@ -1,8 +1,10 @@
 ---
 import TimelineItem from './TimelineItem.astro';
+import SectionTitle from './SectionTitle.astro';
 import { experiences } from '../content/experience.ts';
 ---
 <section id="experience" class="timeline">
+  <SectionTitle title="Experience" />
   <div class="timeline-container">
     {experiences.slice(0,3).map((exp) => (
       <TimelineItem
