@@ -1,0 +1,57 @@
+---
+import Pill from './Pill.astro';
+
+interface Props {
+  date: string
+  title: string
+  place: string
+  actions: string[]
+  technologies: string[]
+}
+
+const { date, title, place, actions, technologies } = Astro.props;
+---
+
+<div class="timeline-item">
+  <div>
+    <h3 class="poppins-medium on-black">{title} · {place}</h3>
+    <span class="date text-muted text-small">{date}</span>
+  </div>
+  <ul>
+    {actions.map((action) => (
+      <li class="text-muted text-small text-light">{action}</li>
+    ))}
+  </ul>
+  <div class="techs">
+    {technologies.map((tech) => (
+      <Pill text={tech} />
+    ))}
+  </div>
+</div>
+
+<style>
+  .timeline-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: all 0.3s ease-in;
+  }
+
+  .timeline-item h3 {
+    font-size: 1.125rem;
+    margin: 0;
+  }
+
+  .timeline-item ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .timeline-item ul li {
+    margin-inline-start: 1rem;
+  }
+</style>

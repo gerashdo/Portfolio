@@ -1,0 +1,38 @@
+
+<nav>
+  <a href="#about" class="active">About</a>
+  <a href="#experience">Experience</a>
+  <a href="#projects">Projects</a>
+</nav>
+
+<style>
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  nav a {
+		color: var(--muted);
+		text-decoration: none;
+		transition: color 0.3s ease, transform 0.3s ease;
+	}
+
+	nav a:hover, nav a.active {
+		color: var(--primary);
+    transform: translateX(1.5rem);
+    font-weight: 600;
+	}
+</style>
+
+<script>
+  const links = document.querySelectorAll("nav a");
+
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
+      links.forEach((l) => l.classList.remove("active"));
+      link.classList.add("active");
+    });
+  });
+</script>

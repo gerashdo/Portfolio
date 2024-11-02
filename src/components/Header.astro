@@ -1,0 +1,74 @@
+---
+import Nav from "./Nav.astro"
+
+const title = "Hi there!"
+const position = "Software Engineer"
+// const description = "Transforming ideas into powerful, user-focused applications."
+---
+<header class="header">
+  <div>
+    <h3 class="poppins-bold on-black animated-border">{title}</h3>
+    <h1 class="poppins-semibold on-black">
+      <span id="name">I'm Gerardo Jiménez Argüelles</span>
+    </h1>
+    <h2 class="poppins-semibold text-muted">{position}</h2>
+    <!-- <p>{description}</p> -->
+  </div>
+  <Nav />
+</header>
+
+<style>
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    padding-top: 3rem;
+  }
+
+  .header h3 {
+    display: inline-block;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  .header h2 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  .header p {
+    font-size: 1rem;
+    max-width: 40rem;
+    margin: 0;
+  }
+</style>
+
+<script>
+  const nameElement = document.querySelector("#name");
+  if (nameElement && nameElement.textContent){
+    const wrappedChars = nameElement.textContent.split("").map((char, index) => {
+      const className = ["first", "second", "third"][index % 3];
+      return `<span class="${className}">${char}</span>`;
+    });
+    nameElement.innerHTML = wrappedChars.join("");
+  }
+
+  const nav = document.querySelector("nav");
+  if (nav) {
+    function toggleNav() {
+      if (window.innerWidth >= 1000) {
+        nav!.style.display = "flex";
+      } else {
+        nav!.style.display = "none";
+      }
+    }
+
+    window.addEventListener("resize", toggleNav);
+    toggleNav();
+  }
+</script>

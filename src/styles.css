@@ -1,0 +1,187 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --primary: #FFCC00;
+  --primary-transparent: rgba(255, 204, 0, 0.1);
+  --text: #EEF1EF;
+  --text-lighter: #F5F7F6;
+  --muted: rgba(238, 241, 239, 0.5);
+  --secondary: #89CE94;
+  --thirdary: #3993DD;
+  --background: #071013;
+  --bachground-light: #171307;
+  --background-transparent: rgba(255, 204, 0, 0.05);
+}
+
+.text-light {
+  font-family: "Poppins", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.accent-text {
+  color: var(--text-lighter);
+}
+
+.text-muted {
+  color: var(--muted);
+}
+
+.text-small {
+  font-size: 0.875rem;
+}
+
+.text-smallest {
+  font-size: 0.75rem;
+}
+
+.first {
+  transition: color 0.2s ease;
+  cursor: grab;
+
+  &:hover {
+    color: var(--primary);
+  }
+}
+
+.second {
+  cursor: grab;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--secondary);
+  }
+}
+
+.third {
+  transition: color 0.2s ease;
+  cursor: grab;
+
+  &:hover {
+    color: var(--thirdary);
+  }
+}
+
+.glass {
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.6px);
+  -webkit-backdrop-filter: blur(2.6px);
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", Arial;
+  font-weight: 400;
+  color: var(--text);
+  background-color: var(--background);
+  background: linear-gradient(90deg, rgba(7,16,19,1) 41%, rgba(31,25,7,1) 100%);
+}
+
+svg {
+  color: var(--text);
+}
+
+.size-5 {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+
+.animated-border {
+  position: relative;
+  text-decoration: none;
+  color: var(--text);
+  padding: 0;
+  transition: color 0.4s ease, padding 0.4s ease;
+  animation: padding-color-animation 1s ease 0.4s forwards;
+}
+
+.animated-border::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+  border: 3px solid var(--primary);
+  border-color: transparent;
+  transition: height 1s ease, width 1s ease;
+  animation: border-animation 1s ease 1s forwards;
+}
+
+@keyframes padding-color-animation {
+  0% {
+    padding: 0;
+    color: var(--text);
+  }
+  100% {
+    padding: 1rem;
+    color: var(--primary);
+  }
+}
+
+@keyframes border-animation {
+  0% {
+    height: 0;
+    width: 0;
+    border-color: transparent transparent transparent var(--primary); /* Left border only */
+  }
+  25% {
+    height: 100%;
+    width: 0;
+    border-color: var(--primary) transparent var(--primary) var(--primary); /* Left and top borders */
+  }
+  50% {
+    height: 100%;
+    width: 100%;
+    border-color: var(--primary) transparent var(--primary) var(--primary); /* Left and bottom borders */
+  }
+  100% {
+    height: 100%;
+    width: 100%;
+    border-color: var(--primary) var(--primary) var(--primary) var(--primary); /* Bottom border only */
+  }
+}

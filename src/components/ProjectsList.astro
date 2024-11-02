@@ -1,0 +1,27 @@
+---
+import ProjectCard from './ProjectCard.astro';
+import { projects } from '../content/projects.ts';
+
+---
+<section id="projects" class="projects-section">
+  <div class="projects-grid">
+    {projects.slice(0,3).map((project) => (
+      <ProjectCard {...project} />
+    ))}
+  </div>
+</section>
+
+<style>
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 1fr);
+    gap: 3rem;
+    padding-top: 2rem;
+  }
+
+  @media (width >= 1000px) {
+    .projects-grid {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+  }
+</style>

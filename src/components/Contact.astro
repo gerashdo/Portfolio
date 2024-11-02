@@ -1,0 +1,55 @@
+---
+import GitHub from "./icons/GitHub.astro";
+import Mail from "./icons/Mail.astro";
+import LinkedIn from "./icons/LinkedIn.astro";
+---
+<footer class="contact-section">
+  <div class="contact-links">
+    <a href="mailto:youremail@example.com" class="contact-link">
+      <Mail class="size-5"/>
+    </a>
+    <a href="https://github.com/yourusername" target="_blank" class="contact-link">
+      <GitHub class="size-5"/>
+    </a>
+    <a href="https://linkedin.com/in/yourusername" target="_blank" class="contact-link">
+      <LinkedIn class="size-5"/>
+    </a>
+  </div>
+</footer>
+
+<style>
+  .contact-section {
+    text-align: center;
+  }
+
+  .contact-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact-section p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-links {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .contact-link {
+    text-decoration: none;
+    transition: color 0.6s ease;
+
+    svg {
+      color: var(--muted);
+      transition: all 0.6s ease;
+    }
+
+    &:hover {
+      svg {
+        color: var(--primary);
+      }
+    }
+  }
+</style>

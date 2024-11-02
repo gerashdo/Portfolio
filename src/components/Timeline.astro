@@ -1,0 +1,34 @@
+---
+import TimelineItem from './TimelineItem.astro';
+import { experiences } from '../content/experience.ts';
+---
+<section id="experience" class="timeline">
+  <div class="timeline-container">
+    {experiences.slice(0,3).map((exp) => (
+      <TimelineItem
+        title={exp.title}
+        place={exp.company}
+        date={exp.date}
+        actions={exp.actions}
+        technologies={exp.technologies}
+      />
+    ))}
+  </div>
+</section>
+
+<style>
+  .timeline {
+    margin-top: 2rem;
+  }
+
+  .timeline h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .timeline-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+</style>
