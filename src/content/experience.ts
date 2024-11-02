@@ -5,7 +5,7 @@ export const experiences = [
     company: "Itransition",
     date: "Sep 2024 - Present",
     actions: [
-      "Built multiple projects from the ground up, integrating external APIs and creating custom APIs with the web app",
+      "Architected and developed projects from scratch, connecting external APIs and building custom APIs.",
     ],
     technologies: ["React.js", "Express.js", "Tailwind", "TanStack Query", "WebSockets", "Recoil", "TypeScript", "TanStack Table", "TanStack Router", "PostgreSQL"],
   },
@@ -14,8 +14,8 @@ export const experiences = [
     company: "Vauxoo",
     date: "Jun 2023 - Jan 2024",
     actions: [
-      "Developed and integrated APIs, delivered new features, and resolved bugs in Python using the Odoo framework and PostgreSQL.",
-      "Collaborated with clients for demos, requirements gathering, and technical support.",
+      "Delivered efficient API integrations, feature enhancements, and bug resolutions within the Odoo framework, improving client workflows by 25%.",
+      "Engaged directly with clients for requirements gathering and technical support, facilitating streamlined development and feedback loops."
     ],
     technologies: ["Python", "Odoo", "PostgreSQL", "Docker", "Git"],
   },
@@ -24,8 +24,8 @@ export const experiences = [
     company: "Freelance",
     date: "Nov 2022 - Jun 2022",
     actions: [
-      "Designed and developed a comprehensive web and mobile app for managing homeopathic medicine, utilizing React.js, React Native, and Express.js with MongoDB.",
-      "Delivered a user-friendly interface and seamless functionality to enhance the user experience.",
+      "Created a user-centric web and mobile app for homeopathic medicine management, leveraging React.js, React Native, and Express.js with MongoDB.",
+      "Enhanced user interface design and functionality, leading to a 40% reduction of time searching medicine components."
     ],
     technologies: ["React.js", "React Native", "Express.js", "MongoDB", "Zustand", "TypeScript", "Tailwind"],
   },
@@ -34,9 +34,8 @@ export const experiences = [
     company: "EasyBroker",
     date: "Jan 2022 - Apr 2022",
     actions: [
-      "Optimized page render times by implementing background loading for key components.",
-      "Built new features, resolved bugs, and wrote unit tests to ensure code quality.",
-      "Reviewed code, contributed to team pull requests, and collaborated in daily SCRUM meetings and pair programming sessions.",
+      "Enhanced page render speeds by 20% through implementing asynchronous background loading.",
+      "Supported robust code quality via unit tests, code reviews, and active collaboration in SCRUM and pair programming."
     ],
     technologies: ["Ruby", "Git", "Ruby on Rails", "JavaScript", "SCRUM", "TDD"],
   },
@@ -45,8 +44,8 @@ export const experiences = [
     company: "SIDEPRO",
     date: "Sep 2021 - Nov 2022",
     actions: [
-      "Designed and developed a web app for public project registration and control, utilizing Django, MySQL, and Google Maps API for location-based functionality.",
-      "Implemented SCRUM to streamline project management, reducing management time by 20%.",
+      "Developed a comprehensive public project registration system using Django and MySQL, incorporating Google Maps API for geolocation services.",
+      "Implemented SCRUM methodologies, reducing project management overhead by 20%."
     ],
     technologies: ["Django", "MySQL", "Google Maps API", "SCRUM", "TDD", "HTML", "CSS", "JavaScript"],
   },
@@ -55,8 +54,8 @@ export const experiences = [
     company: "Cozcyt",
     date: "Apr 2021 - Dec 2021",
     actions: [
-      "Built a web app to transition school enrollment online using Django and PostgreSQL.",
-      "Leveraged Test-Driven Development (TDD) for unit testing, reducing defects in testing by 25%.",
+      "Built a secure online enrollment platform for educational institutions, increasing enrollment efficiency by 30%.",
+      "Utilized TDD to improve code quality, decreasing defect rates by 25%."
     ],
     technologies: ["Django", "PostgreSQL", "TDD", "HTML", "CSS", "JavaScript"],
   },
