@@ -12,6 +12,8 @@
   --background: #071013;
   --bachground-light: #171307;
   --background-transparent: rgba(255, 204, 0, 0.05);
+
+  font-size: 12px;
 }
 
 .text-light {
@@ -183,5 +185,12 @@ svg {
     height: 100%;
     width: 100%;
     border-color: var(--primary) var(--primary) var(--primary) var(--primary); /* Bottom border only */
+  }
+}
+
+
+@media (width >= 500px) {
+  :root {
+    font-size: 18px;
   }
 }
