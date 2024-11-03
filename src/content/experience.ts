@@ -22,7 +22,7 @@ export const experiences = [
   {
     title: "Full Stack Developer",
     company: "Freelance",
-    date: "Nov 2022 - Jun 2022",
+    date: "Nov 2022 - Jun 2023",
     actions: [
       "Created a user-centric web and mobile app for homeopathic medicine management, leveraging React.js, React Native, and Express.js with MongoDB.",
       "Enhanced user interface design and functionality, leading to a 40% reduction of time searching medicine components."
