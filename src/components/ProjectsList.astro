@@ -7,7 +7,7 @@ import { projects } from '../content/projects.ts';
 <section id="projects" class="projects-section">
   <SectionTitle title="Projects" />
   <div class="projects-grid">
-    {projects.slice(0,3).map((project) => (
+    {projects.slice(0,4).map((project) => (
       <ProjectCard {...project} />
     ))}
   </div>
@@ -15,15 +15,18 @@ import { projects } from '../content/projects.ts';
 
 <style>
   .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 1fr);
-    gap: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-inline: 1rem;
     padding-top: 2rem;
   }
 
   @media (width >= 555px) {
     .projects-grid {
+      display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-template-rows: auto;
       gap: 1rem;
     }
   }
@@ -33,6 +36,7 @@ import { projects } from '../content/projects.ts';
       display: flex;
       flex-direction: column;
       gap: 2rem;
+      padding: 0;
     }
   }
 </style>
