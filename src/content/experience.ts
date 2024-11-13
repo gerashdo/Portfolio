@@ -14,7 +14,7 @@ export const experiences = [
     company: "Vauxoo",
     date: "Jun 2023 - Jan 2024",
     actions: [
-      "Delivered efficient API integrations, feature enhancements, and bug resolutions within the Odoo framework, decreaseing client workflows time by 25%.",
+      "Delivered efficient API integrations, feature enhancements, and bug resolutions within the Odoo framework, decreasing client workflows time by 25%.",
       "Engaged directly with clients for requirements gathering and technical support, facilitating streamlined development and feedback loops."
     ],
     technologies: ["Python", "Odoo", "PostgreSQL", "Docker", "Git"],
